@@ -7,21 +7,21 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField]
     private Transform target;
     [SerializeField]
-    private Transform checkpoint;
-    [SerializeField]
-    private Transform borderL;
-    [SerializeField]
-    private Transform borderR;
-
+    private Transform checkpoint;       // for checking if camera should move up
     [SerializeField]
     private float speed;
 
+    Camera cam;
     private float diff, left, right;
+    float rightEdge;
 
     private void Start()
     {
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 120;
+        cam = gameObject.GetComponent<Camera>();
+        rightEdge = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0.0f, 0.0f)).x;
+        
     }
 
     // Update is called once per frame
@@ -32,15 +32,18 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = Vector3.Slerp(transform.position, transform.position + new Vector3(0.0f, diff, 0.0f), speed * Time.deltaTime);
         }
-        right = target.transform.position.x - borderR.position.x;
+        
+        right = target.transform.position.x - rightEdge;
         if (right >= 0.0f)
         {
             target.transform.position = Vector3.Slerp(target.transform.position, target.transform.position + new Vector3(-right, 0.0f, 0.0f), speed * Time.deltaTime * 20);
         }
-        left = target.transform.position.x - borderL.position.x;
+        
+        left = target.transform.position.x + rightEdge;
         if (left <= 0.0f)
         {
             target.transform.position = Vector3.Slerp(target.transform.position, target.transform.position + new Vector3(-left, 0.0f, 0.0f), speed * Time.deltaTime * 20);
         }
+
     }
 }

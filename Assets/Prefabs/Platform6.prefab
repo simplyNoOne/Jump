@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087224990176053989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1261, y: 0.4118, z: -1}
-  m_LocalScale: {x: 14.844151, y: 0.22717988, z: 1}
+  m_LocalPosition: {x: 0.0671, y: 0.4118, z: -1}
+  m_LocalScale: {x: 14.458202, y: 0.22717988, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4567230508737538416}
@@ -256,6 +256,8 @@ CompositeCollider2D:
       - {x: -2.5531647, y: -0.3253089}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 0
+  m_CompositeGameObject: {fileID: 1225700835170161927}
 --- !u!1 &1961108246765802841
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +333,8 @@ SpriteRenderer:
   m_SortingLayerID: -453617201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf16142c8f5536c4b98d952237028c34, type: 3}
-  m_Color: {r: 0.3443396, g: 1, b: 0.62479967, a: 0.9019608}
+  m_Sprite: {fileID: 21300000, guid: 8c49c5c6bbca2564bb40e6c30af81683, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_FlipX: 1
   m_FlipY: 1
   m_DrawMode: 2

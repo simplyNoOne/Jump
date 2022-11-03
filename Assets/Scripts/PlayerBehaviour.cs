@@ -8,6 +8,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float jumpVel;
     public GameObject SFxPlayer;
 
+    public GameObject mobileButton;
+
     private Rigidbody2D body;
 
     private bool bInAir;
@@ -21,6 +23,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_STANDALONE_OSX ||UNITY_STANDALONE_WIN 
+        mobileButton.SetActive(false);
+#endif
         body = GetComponent<Rigidbody2D>();
         doubleJump = 2;
         currentPlatform = 0;
@@ -32,12 +37,20 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space) && (!bInAir || doubleJump>0))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+    }
+
+    public void Jump()
+    {
+        if (!bInAir || doubleJump > 0)
         {
             SFxPlayer.GetComponent<SFxPlayer>().PlayJump();
             lastPlatform = currentPlatform;
             body.velocity = Vector2.up * jumpVel;
-            doubleJump --;
+            doubleJump--;
             jumped = true;
         }
     }
