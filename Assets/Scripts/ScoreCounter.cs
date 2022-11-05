@@ -22,6 +22,8 @@ public class ScoreCounter : MonoBehaviour
     private int prevPlatformNum;
     private bool shouldCheckPos;
 
+    bool tempSteady;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,36 +39,55 @@ public class ScoreCounter : MonoBehaviour
         {
             CalcPoints();
         }
+        if (tempSteady)
+        {
+            StartCoroutine(Steady());
+        }
+        
     }
+
+    IEnumerator Steady()
+    {
+        yield return new WaitForSeconds(0.01f);
+        if (tempSteady)
+        {
+            ChangeScore(LocCredit + PosCredit);
+            tempSteady = false;
+        }
+    }
+
+   
 
     private void CalcPoints()
     {
         PointsBasedOnLanding();
-        if (!shouldCheckPos) 
+        if (!shouldCheckPos)
         {
             PointsBasedOnPlatform();
             if ((LocCredit == -1) && PosCredit == 2)
                 PosCredit--;
-            ChangeScore(LocCredit + PosCredit);
         }       
     }
 
     private void PointsBasedOnLanding()
     {
-        if (Mathf.Abs(points[0].position.x - points[1].position.x) < 0.01f)
+        if (Mathf.Abs(points[0].position.x - points[1].position.x) < 0.003f)
         {
+            tempSteady = true;
             shouldCheckPos = false;
             if (points[0].position.y > points[1].position.y)
                 PosCredit = 1;
             else
                 PosCredit = 2;
-            
         }
-        else if ((Mathf.Abs(points[2].position.y - points[3].position.y) < 0.01f) || (Mathf.Abs(points[4].position.y - points[5].position.y) < 0.01f))
+        else if ((Mathf.Abs(points[2].position.y - points[3].position.y) < 0.005f) || (Mathf.Abs(points[4].position.y - points[5].position.y) < 0.005f))
         {
+            tempSteady = true;
             shouldCheckPos = false;
             PosCredit = 0;
         }
+        else
+            tempSteady = false;
     }
 
     private void PointsBasedOnPlatform()
@@ -81,7 +102,7 @@ public class ScoreCounter : MonoBehaviour
     }
 
     public void CheckScore(int lastPlatformNum)
-    {        
+    {
         prevPlatformNum = lastPlatformNum;
         shouldCheckPos = true;
     }
@@ -89,6 +110,7 @@ public class ScoreCounter : MonoBehaviour
 
     public void ChangeScore(int change)
     {
+        //shouldCheckPos = false;
         if (change > 0)
             SFxManager.GetComponent<SFxPlayer>().PlayGetP();
         else if (change < 0)

@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7386861561414044244, guid: 42bb2b106c7e2674fbe7927e120d1796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7678204
+      value: 8.33
       objectReference: {fileID: 0}
     - target: {fileID: 7386861561414044244, guid: 42bb2b106c7e2674fbe7927e120d1796, type: 3}
       propertyPath: m_LocalPosition.z
@@ -765,18 +765,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2864666, y: 2.2533588}
+  m_Offset: {x: -0.2864666, y: 2.8358932}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 57.0816, y: 6.0250607}
+    newSize: {x: 57.0816, y: 7.4914193}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 58.084232, y: 1.4834805}
+  m_Size: {x: 58.084232, y: 1.8550158}
   m_EdgeRadius: 0
 --- !u!212 &517662624
 SpriteRenderer:
@@ -824,7 +824,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 57.0816, y: 6.0250607}
+  m_Size: {x: 57.0816, y: 7.4914193}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -838,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517662622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: 1}
+  m_LocalPosition: {x: 0, y: -8.3932, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -871,18 +871,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6041994, y: 2.561501}
+  m_Offset: {x: 0.6041994, y: 2.9360483}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 57.0816, y: 6.0250607}
+    newSize: {x: 57.0816, y: 7.4914193}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.60576, y: 1.1157312}
+  m_Size: {x: 30.60576, y: 1.8648257}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -938,7 +938,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1402,7 +1402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787996528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.61, z: 1}
+  m_LocalPosition: {x: 0, y: 11.09, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1486,7 +1486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807985798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.43, z: 10}
+  m_LocalPosition: {x: 0, y: 3.7, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1734,7 +1734,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb558cda0d517d046af788c08c003dbe, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2415,7 +2415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144028972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -12.89, z: 1}
+  m_LocalPosition: {x: 0, y: -14.35, z: 1}
   m_LocalScale: {x: 43.306095, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2539,7 +2539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1645286448117883448, guid: a03422b3986994d43ba6c6675847bb75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 1645286448117883448, guid: a03422b3986994d43ba6c6675847bb75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2954,7 +2954,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bdbd1403caee5ee4eabc819843680314, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 0.65
   Loop: 0
   Mute: 0
@@ -3068,7 +3068,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 66b4307510caa6645ad2a99dc0ae0b3b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.74
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3667,8 +3667,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bdbd1403caee5ee4eabc819843680314, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 0.2
+  m_Volume: 0.3
+  m_Pitch: 0.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4042,8 +4042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7972eab6e1c8d2d40ac0e7563e095cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minStep: 4.5
-  maxStep: 6.5
+  minStep: 5
+  maxStep: 7
   spawner: {fileID: 787996528}
   destroyer: {fileID: 1144028972}
   platforms:
@@ -4055,6 +4055,7 @@ MonoBehaviour:
   - {fileID: 1225700835170161927, guid: 3af6beef5b9482b4087b2a0ae52bf8fa, type: 3}
   - {fileID: 7315279200545763946, guid: 7ce8b45e03f9a7644996b6b8671acc81, type: 3}
   - {fileID: 3886244925525140550, guid: 511295a25a26b9d46ac29d1fcff78cf5, type: 3}
+  - {fileID: 4200392056865728562, guid: a04654f46114a0d4b995c84982cf7f91, type: 3}
 --- !u!1 &2050281282
 GameObject:
   m_ObjectHideFlags: 0
@@ -4517,6 +4518,10 @@ PrefabInstance:
       value: 0.004735112
       objectReference: {fileID: 0}
     - target: {fileID: 8755006477110450441, guid: 74fbc2faff1500b40bdb8f176c5403bf, type: 3}
+      propertyPath: jumpVel
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755006477110450441, guid: 74fbc2faff1500b40bdb8f176c5403bf, type: 3}
       propertyPath: SFxPlayer
       value: 
       objectReference: {fileID: 2145709448}
@@ -4534,7 +4539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8755006477110450443, guid: 74fbc2faff1500b40bdb8f176c5403bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.98
+      value: -3.49
       objectReference: {fileID: 0}
     - target: {fileID: 8755006477110450443, guid: 74fbc2faff1500b40bdb8f176c5403bf, type: 3}
       propertyPath: m_LocalPosition.z

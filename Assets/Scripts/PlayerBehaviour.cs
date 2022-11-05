@@ -64,10 +64,9 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.CompareTag("PositionCheck"))
         {
             currentPlatform = collision.gameObject.GetComponentInParent<PlatformActions>().platformNum;
+            gameObject.GetComponent<ScoreCounter>().CheckScore(lastPlatform);
             if (jumped)
             {
-                gameObject.GetComponent<ScoreCounter>().CheckScore(lastPlatform);
-                
                 doubleJump = 2;
                 jumped = false;
             }

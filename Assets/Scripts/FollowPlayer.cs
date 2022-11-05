@@ -33,13 +33,13 @@ public class FollowPlayer : MonoBehaviour
             transform.position = Vector3.Slerp(transform.position, transform.position + new Vector3(0.0f, diff, 0.0f), speed * Time.deltaTime);
         }
         
-        right = target.transform.position.x - rightEdge;
+        right = target.transform.position.x - rightEdge +0.5f;
         if (right >= 0.0f)
         {
             target.transform.position = Vector3.Slerp(target.transform.position, target.transform.position + new Vector3(-right, 0.0f, 0.0f), speed * Time.deltaTime * 20);
         }
         
-        left = target.transform.position.x + rightEdge;
+        left = target.transform.position.x + rightEdge - 0.5f;
         if (left <= 0.0f)
         {
             target.transform.position = Vector3.Slerp(target.transform.position, target.transform.position + new Vector3(-left, 0.0f, 0.0f), speed * Time.deltaTime * 20);

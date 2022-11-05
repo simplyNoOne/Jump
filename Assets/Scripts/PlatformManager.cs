@@ -25,7 +25,7 @@ public class PlatformManager : MonoBehaviour
     void Start()
     {
         num = 3;
-        spawnHeight = spawner.transform.position.y + 4.0f;
+        spawnHeight = spawner.transform.position.y + 5.0f;
         StartCoroutine(spawnPlatform());
     }
   
